@@ -1,41 +1,35 @@
-# Frontend Coding Challenge
+# My Screen Recorder Url:
 
-Our main goal for this exercise is to get an idea of how you are to work with and how you approach your engineering work. That insight is more important than your actual working solution at the end of this exercise.
-
-Please record your screen and talk us through the coding exercise as you work through it. Don't hesitate to think out loud—that's the interesting part!
-
-We expect this to take around an hour.
+https://www.loom.com/share/ba3da4befbae48a8a3f164bdf5975ff6
 
 ## Brief
 
-You'll be working on a tiny app that looks up airport information. In its current state, we render a list of all airports (around 6000), and have a basic typeahead search feature so the user can look up airports by searching by name, IATA, city, or country.
-
-The designer gave you this mock-up as a reference:
-
-![image](https://user-images.githubusercontent.com/144075/144594282-68de44cd-bef2-4d9d-8c5d-398862cbc964.png)
-
-Your goal is to improve this app as provided in the mockup in a way that it offers a better user experience, considers performance bottlenecks, and is also mobile responsive to make the overall experience much more efficient.
-
-## Assumptions
-
-- Tilla uses [Next.JS](http://nextjs.org) and TypeScript. It'd be cool if you use that same tech stack for this exercise.
-- The database is currently a JSON file with airport data. We don't expect you to move this into a database layer.
-- The IATA code is a unique identifier for an airport.
-- While we care more about your thought process than your outcome, we're still interested in how you write code. Don't cut corners there, and write the code as if you'd write a real-world, production-quality product.
+I used the React-window library for recycler methodology to display only a few items to the user. also used useCallBack and use debounce for search input.
 
 ## Extra questions
 
-We'd love to hear your thoughts on some of these questions. Please don't spend more than a minute or two on each question.
-
 - What are some edge cases you would take care of before shipping this to production?
+
+  1.  Think a lot about the variable and method names, complemete related, without abstraction
+  2.  Extract a block of code to a function with meaningfull name
+  3.  move a helper code to helper folder, a const to constants folder ...
+  4.  define consts for everything that is const
+  5.  Do not use export default, do not change state directly, use [...state]
+  6.  use react.memo when ever component is only rerendering for parent rerendering
+  7.  make sure change state only inside useEffect() or handlers
+      and ...
+
 - What changes would you make to your solution to make it mobile responsive?
+  depends on css lib, give classname cl for xs, md, lg. or set mediaquery.
 - What's important for you to work well in a fully remote team?
+  1. Based on the API documents undrstanding of properties, validations
+  2. It would be great to have fast response from backend developers for my api questions
+  3. daily/weekly meeting to talk about the tasks and the plan for project and deadlines.
+  4. good collaboration through online platforms
 
 ## Deliverables
 
-- Invite [@pieterbeulque](https://github.com/pieterbeulque) and [@umartayyab](https://github.com/umartayyab) to a GitHub repo with your completed project
-- A video of your screen recording (unlisted YouTube video, Loom, … anything works)
-- Answers to the questions above can be either in the video or written down in the README of your repo
+- I Invite [@pieterbeulque](https://github.com/pieterbeulque) and [@umartayyab](https://github.com/umartayyab) to a GitHub repo with my completed project.
 
 ## Getting Started
 
@@ -47,5 +41,3 @@ yarn dev
 ```
 
 The app should be available via [http://localhost:3000](http://localhost:3000).
-
-Good luck and talk soon!

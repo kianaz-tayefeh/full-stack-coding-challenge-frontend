@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { FixedSizeList as List } from "react-window";
-// import AutoSizer from "react-virtualized-auto-sizer";
 
 import Layout from "../components/layout";
 import useApiData from "../hooks/use-api-data";
@@ -28,7 +27,7 @@ const Page: NextPage = () => {
           href={`/airports/${airports[index].iata.toLowerCase()}`}
           key={airports[index].iata}
         >
-          <span>
+          <span className="airport-name">
             {airports[index].name}, {airports[index].city}
           </span>
           <span className="ml-auto text-gray-500">
@@ -65,11 +64,10 @@ const Page: NextPage = () => {
 
       <div>
         <List
-          className="List"
+          className="list"
           height={600}
           itemCount={airports.length}
           itemSize={75}
-          width={800}
         >
           {airportItem}
         </List>
